@@ -1,0 +1,1 @@
+ALTER TABLE `cms_auth_challenges` ADD `code_hash` text;

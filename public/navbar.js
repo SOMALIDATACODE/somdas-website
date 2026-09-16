@@ -1,0 +1,1 @@
+(()=>{const header=document.querySelector('.site-header,.activity-header');if(!header)return;let pending=false;function update(){header.classList.toggle('is-scrolled',window.scrollY>12);pending=false;}update();window.addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(update);}},{passive:true});})();

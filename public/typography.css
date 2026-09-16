@@ -1,0 +1,55 @@
+@font-face{font-family:Inter;src:url('/fonts/inter.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url('/fonts/jakarta.woff2') format('woff2');font-style:normal;font-weight:200 800;font-display:swap}
+html:root,body,.cms{font-family:Inter,Arial,sans-serif;font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.cms h1,.cms h2,.cms h3{font-family:'Plus Jakarta Sans',Inter,sans-serif}
+input,select,textarea,button{font-family:inherit}
+.brand-lockup{display:inline-flex;align-items:center;gap:10px;color:#052156;text-decoration:none;flex-shrink:0}
+.brand-lockup .brand-mark{width:44px;height:48px;object-fit:contain;display:block;flex-shrink:0;filter:none!important}
+.brand-words{display:flex;flex-direction:column;gap:4px;white-space:nowrap}
+.brand-name{font-family:'Plus Jakarta Sans',Inter,sans-serif;font-size:28px;font-weight:800;letter-spacing:-1.1px;line-height:1}
+.brand-name em,.brand-tagline em{color:#65b2f8;font-style:normal}
+.brand-tagline{font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:-.1px;line-height:1.2}
+[data-theme=dark] .brand-lockup,.dark .brand-lockup{color:#eff6ff}
+[data-theme=dark] .brand-lockup .brand-mark,.dark .brand-lockup .brand-mark{content:url('/assets/somdas-mark-dark.png');filter:none!important}
+.footer-brand.brand-lockup .brand-mark{content:url('/assets/somdas-mark-dark.png');filter:none!important}
+
+/* Shared editorial rhythm used by every public SOMDAS page. */
+:root{
+  --font-display:'Plus Jakarta Sans',Inter,system-ui,sans-serif;
+  --font-body:Inter,'Segoe UI',system-ui,sans-serif;
+  --section-space:clamp(72px,7vw,108px);
+  --section-space-mobile:clamp(52px,12vw,68px);
+}
+html:root,body,.cms{font-family:var(--font-body);font-optical-sizing:auto;font-kerning:normal}
+main p,main li{font-family:var(--font-body);letter-spacing:-.012em}
+h1,h2,h3,h4,.cms h1,.cms h2,.cms h3{font-family:var(--font-display);text-wrap:balance}
+.lower-section,.sodi-space,.about-space{padding-block:var(--section-space)!important}
+.section-container,.sodi-wrap,.about-wrap{width:min(1360px,91%)!important;margin-inline:auto!important}
+:where(.eyebrow,.sodi-eyebrow){
+  display:inline-flex!important;
+  align-items:center;
+  gap:10px;
+  margin:0 0 14px!important;
+  color:var(--eyebrow-color,#076dff)!important;
+  font-family:var(--font-display)!important;
+  font-size:.78rem!important;
+  font-weight:750!important;
+  line-height:1.35!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+  text-align:inherit!important;
+}
+:where(.eyebrow,.sodi-eyebrow)::before{
+  content:'';
+  width:22px;
+  height:2px;
+  flex:0 0 22px;
+  border-radius:99px;
+  background:currentColor;
+}
+:where(.sodi-intro-hero,.research-hero,.academy-hero,.lab-hero-copy,.solutions-hero,.sodi-process,.research-standards,.academy-approach,.lab-process,.solutions-standards,.about-hero,.about-mission,.community-section,.sodi-flagship){--eyebrow-color:#7ac7ff}
+@media(max-width:750px){
+  .lower-section,.sodi-space,.about-space{padding-block:var(--section-space-mobile)!important}
+  .section-container,.sodi-wrap,.about-wrap{width:min(100% - 40px,1360px)!important}
+  :where(.eyebrow,.sodi-eyebrow){font-size:.72rem!important;letter-spacing:.12em!important}
+}
